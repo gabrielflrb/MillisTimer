@@ -16,10 +16,8 @@ void MillisTimer::_start(const bool fin){
 
 void MillisTimer::_trigger(){
     if (_finite){
-        if (_counter == 0)
+        if (--_counter == 0)
             stop();
-        else
-            _counter--;
     }
     
     resetMillis();
